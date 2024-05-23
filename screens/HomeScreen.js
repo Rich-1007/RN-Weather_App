@@ -24,7 +24,7 @@ import { useCallback, useState } from "react";
 import { fetchLocations } from "../api/weather";
 
 export default function HomeScreen() {
-  const [locations, setLocations] = useState([1, 2, 3]);
+  const [locations, setLocations] = useState([]);
 
   const handleLocation = (loc) => {
     console.log(loc);
@@ -34,11 +34,10 @@ export default function HomeScreen() {
     // console.log(value);
 
     if (value.length > 2) {
-      fetchLocations({ cityName: value }).then(data => {
-        console.log(data);
-      })
+      fetchLocations({ cityName: value }).then((data) => {
+        setLocations(data);
+      });
     }
-    
   };
 
   const hanleTextDebounce = useCallback(debounce(handleSearch, 1200), []);
@@ -47,7 +46,7 @@ export default function HomeScreen() {
     <View className="flex-1 relative">
       <StatusBar style="light" backgroundColor="black" />
       <Image
-        blurRadius={70}
+        blurRadius={68}
         source={require("../assets/bg.png")}
         className="absolute h-full w-full"
       />
@@ -99,7 +98,7 @@ export default function HomeScreen() {
                     //
                   >
                     <MapPinIcon size={20} color="gray" />
-                    <Text className="text-black ml-2 text-lg">{loc}</Text>
+                    <Text className="text-black ml-2 text-lg">{loc?.name}</Text>
                   </TouchableOpacity>
                 );
               })}
@@ -178,7 +177,7 @@ export default function HomeScreen() {
             >
               <Image
                 source={require("../assets/heavyrain.png")}
-                className="h-16 w-20"
+                className="h-20 w-20 "
               />
               <Text className="text-white text-center">Monday</Text>
               <Text className="text-white text-xl font-semibold text-center">
@@ -192,7 +191,7 @@ export default function HomeScreen() {
             >
               <Image
                 source={require("../assets/heavyrain.png")}
-                className="h-16 w-20"
+                className="h-20 w-20"
               />
               <Text className="text-white text-center">Tuesday</Text>
               <Text className="text-white text-xl font-semibold text-center">
@@ -206,7 +205,7 @@ export default function HomeScreen() {
             >
               <Image
                 source={require("../assets/heavyrain.png")}
-                className="h-16 w-20"
+                className="h-20 w-20"
               />
               <Text className="text-white text-center">Wednesday</Text>
               <Text className="text-white text-xl font-semibold text-center">
@@ -220,7 +219,7 @@ export default function HomeScreen() {
             >
               <Image
                 source={require("../assets/heavyrain.png")}
-                className="h-16 w-20"
+                className="h-20 w-20"
               />
               <Text className="text-white text-center">Thursday</Text>
               <Text className="text-white text-xl font-semibold text-center">
@@ -234,7 +233,7 @@ export default function HomeScreen() {
             >
               <Image
                 source={require("../assets/heavyrain.png")}
-                className="h-16 w-20"
+                className="h-20 w-20"
               />
               <Text className="text-white text-center">Friday</Text>
               <Text className="text-white text-xl font-semibold text-center">
@@ -248,7 +247,7 @@ export default function HomeScreen() {
             >
               <Image
                 source={require("../assets/heavyrain.png")}
-                className="h-16 w-20"
+                className="h-20 w-20"
               />
               <Text className="text-white text-center">Saturday</Text>
               <Text className="text-white text-xl font-semibold text-center">
@@ -262,7 +261,7 @@ export default function HomeScreen() {
             >
               <Image
                 source={require("../assets/heavyrain.png")}
-                className="h-16 w-20"
+                className="h-20 w-20"
               />
               <Text className="text-white text-center">Sunday</Text>
               <Text className="text-white text-xl font-semibold text-center">
