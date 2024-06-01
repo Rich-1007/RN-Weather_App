@@ -1,18 +1,10 @@
-import { StatusBar } from "expo-status-bar";
-import {
-  Image,
-  SafeAreaView,
-  StyleSheet,
-  Text,
-  TextInput,
-  View,
-} from "react-native";
-import AppNavigation from "./navigation/appNavigation";
+import { Text, View } from "react-native";
+import AppNavigation from "./Navigation/appNavigation";
 
 export default function App() {
   return (
-    
+    <>
       <AppNavigation />
-    
+    </>
   );
 }
