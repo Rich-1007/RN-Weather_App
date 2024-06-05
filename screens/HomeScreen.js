@@ -9,7 +9,7 @@ import {
   TouchableOpacity,
 } from "react-native";
 
-import * as Progress from "react-native-progress";
+// import * as Progress from "react-native-progress";
 
 import { theme, weatherImages } from "../theme";
 import { ScrollView, TextInput } from "react-native-gesture-handler";
@@ -17,6 +17,7 @@ import { debounce } from "lodash";
 // import { TouchableOpacity } from "react-native-web";
 
 import {
+  
   CalendarDaysIcon,
   MagnifyingGlassIcon,
 } from "react-native-heroicons/outline";
@@ -83,7 +84,7 @@ export default function HomeScreen() {
       />
       {loading ? (
         <View className="flex flex-1 justify-center items-center ">
-          <Progress.CircleSnail thickness={10} size={120} color="#0bb3b2" />
+          {/* <Progress.CircleSnail thickness={10} size={120} color="#0bb3b2" /> */}
         </View>
       ) : (
         <SafeAreaView
