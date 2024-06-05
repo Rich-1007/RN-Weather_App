@@ -9,7 +9,7 @@ import {
   TouchableOpacity,
 } from "react-native";
 
-import * as Progress from "react-native-progress";
+// import Progress from "react-native-progress";
 
 import { theme, weatherImages } from "../theme";
 import { ScrollView, TextInput } from "react-native-gesture-handler";
@@ -83,7 +83,7 @@ export default function HomeScreen() {
       />
       {loading ? (
         <View className="flex flex-1 justify-center items-center ">
-          <Progress.CircleSnail thickness={10} size={120} color="#0bb3b2" />
+          {/* <Progress.CircleSnail thickness={10} size={120} color="#0bb3b2" /> */}
         </View>
       ) : (
         <SafeAreaView
@@ -132,8 +132,8 @@ export default function HomeScreen() {
                         "flex-row items-center border-0 p-3 px-4 mb-1 " +
                         borderClass
                       }
-                      //
-                      //
+                    //
+                    //
                     >
                       <MapPinIcon size={20} color="gray" />
                       <Text className="text-black ml-2 text-lg">
@@ -150,7 +150,7 @@ export default function HomeScreen() {
             <Text className="text-white text-center text-2xl font-bold">
               {location?.name}
               <Text className="text-lg font-semibold text-gray-300">
-                {", "+location?.country}
+                {", " + location?.country}
               </Text>
             </Text>
 
