@@ -13,10 +13,6 @@ const profileImg = require("../assets/Profile-Photo (2).png")
 const linkedinImg = require("../assets/Linkedin-icon-1.png")
 const githubImg = require("../assets/github-icons-1.png")
 
-
-
-
-
 export default function Portfolio() {
   return (
     <View style={styles.container} className="bg-[#1C1A1A]  ">
@@ -42,22 +38,31 @@ export default function Portfolio() {
 
               </View>
 
+              <View className="flex flex-row py-6  items-center justify-around ">
+                <Button title="Hire Me" color="#C05621" />
+                <Button title="Download CV" color="#353434" />
+              </View>
 
+              <View>
+                <Text className="text-white font-semibold py-6">Tech Stack | </Text>
+              </View>
+            </View>
 
+            <View className="bg-[#C05621]  my-10 h-60 w-60 rounded-full overflow-hidden flex justify-center items-center">
+              <Image source={profileImg} className="h-60 w-60 " />
+            </View>
+          </View>
+        </ScrollView>
+      </SafeAreaView>
+    </View>
+  );
+}
 
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    alignItems: "center",
+    justifyContent: "center",
+  },
+});
