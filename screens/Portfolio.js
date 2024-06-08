@@ -13,6 +13,22 @@ const profileImg = require("../assets/Profile-Photo (2).png")
 const linkedinImg = require("../assets/Linkedin-icon-1.png")
 const githubImg = require("../assets/github-icons-1.png")
 
+const icon1 = require("../assets/Tech-Stack/html-5--v1.png")
+const icon2 = require("../assets/Tech-Stack/css3.png")
+const icon3 = require("../assets/Tech-Stack/bootstrap.png")
+const icon4 = require("../assets/Tech-Stack/Tailwind_CSS_Logo.svg.png")
+const icon5 = require("../assets/Tech-Stack/javascript--v1.png")
+
+
+const icon6 = require("../assets/Tech-Stack/mysql-logo.png")
+const icon7 = require("../assets/Tech-Stack/react.png")
+const icon8 = require("../assets/Tech-Stack/nodejs.png")
+const icon9 = require("../assets/Tech-Stack/ios.png")
+const icon10 = require("../assets/Tech-Stack/android.png")
+
+
+
+
 export default function Portfolio() {
   return (
     <View style={styles.container} className="bg-[#1C1A1A]  ">
@@ -43,13 +59,35 @@ export default function Portfolio() {
                 <Button title="Download CV" color="#353434" />
               </View>
 
-              <View>
-                <Text className="text-white font-semibold py-6">Tech Stack | </Text>
+              <View className="flex flex-row items-center  ">
+                <Text className="text-white font-semibold py-6 text-lg">Tech Stack </Text>
+                <View className="h-28 border-green-400 border-2 bg-green-400"></View>
+                <View className="flex flex-row  flex-wrap gap-1">
+                  <Image source={icon1} className="h-14 w-14 " />
+                  <Image source={icon2} className="h-14 w-14" />
+                  <Image source={icon3} className="h-14 w-14" />
+                  <Image source={icon4} className="h-14 w-14" />
+                  <Image source={icon5} className="h-14 w-14" />
+
+
+                  <View className="flex flex-row  flex-wrap gap-1">
+
+                    <Image source={icon6} className="h-14 w-14" />
+                    <Image source={icon7} className="h-14 w-14" />
+                    <Image source={icon8} className="h-14 w-14" />
+                    <Image source={icon9} className="h-14 w-14" />
+                    <Image source={icon10} className="h-14 w-14" />
+                  </View>
+                </View>
+
+
               </View>
             </View>
 
             <View className="bg-[#C05621]  my-10 h-60 w-60 rounded-full overflow-hidden flex justify-center items-center">
               <Image source={profileImg} className="h-60 w-60 " />
+
+
             </View>
           </View>
         </ScrollView>
