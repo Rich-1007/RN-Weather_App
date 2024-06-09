@@ -7,11 +7,11 @@ import {
   StyleSheet,
   Text,
   View,
-} from "react-native";
-// const logoImg = require("./adaptive-icon.png")
-const profileImg = require("../assets/Profile-Photo (2).png")
-const linkedinImg = require("../assets/Linkedin-icon-1.png")
-const githubImg = require("../assets/github-icons-1.png")
+  } from "react-native";
+
+const profileImg = require("../assets/Tech-Stack/Profile-Photo.png")
+const linkedinImg = require("../assets/Tech-Stack/LinkedIn.png")
+const githubImg = require("../assets/Tech-Stack/Github.jpg")
 
 const icon1 = require("../assets/Tech-Stack/html-5--v1.png")
 const icon2 = require("../assets/Tech-Stack/css3.png")
@@ -25,7 +25,6 @@ const icon7 = require("../assets/Tech-Stack/React.png")
 const icon8 = require("../assets/Tech-Stack/nodejs.png")
 const icon9 = require("../assets/Tech-Stack/ios.png")
 const icon10 = require("../assets/Tech-Stack/android.png")
-
 
 
 
@@ -49,8 +48,8 @@ export default function Portfolio() {
                 based in Hyderabad, Telangana..
               </Text>
               <View className="flex flex-row gap-4 py-3">
-                <Image source={linkedinImg} className="h-12 w-12 rounded-full" />
-                <Image source={githubImg} className="h-12 w-12 rounded-full" />
+                <Image source={linkedinImg} className="h-12 w-12 rounded-xl" />
+                <Image source={githubImg} className="h-12 w-12 rounded-xl" />
 
               </View>
 
@@ -75,7 +74,7 @@ export default function Portfolio() {
                 <Image source={icon7} className="h-14 w-14 " />
                 <Image source={icon8} className="h-14 w-14" />
                 <Image source={icon9} className="h-14 w-14" />
-                <Image source={icon10} className="h-14 w-14"/>
+                <Image source={icon10} className="h-14 w-14" />
 
               </View>
             </View>
@@ -87,6 +86,81 @@ export default function Portfolio() {
               </View>
             </View>
 
+
+            <View className="py-10">
+              <Text className="text-3xl text-white font-bold">My Skills</Text>
+
+
+              <View className="flex flex-row flex-wrap gap-2 py-4">
+
+                <View className="bg-slate-200 opacity-40 py-5 px-5 rounded-md">
+                  <Text className="text-xl text-white font-bold">HTML</Text>
+                </View>
+
+
+                <View className="bg-slate-200 opacity-40 py-5 px-5 rounded-md">
+                  <Text className="text-xl text-white font-bold">Css</Text>
+                </View>
+
+                <View className="bg-slate-200 opacity-40 py-5 px-5 rounded-md">
+                  <Text className="text-xl text-white font-bold">Tailwind</Text>
+                </View>
+
+
+                <View className="bg-slate-200 opacity-40 py-5 px-5 rounded-md">
+                  <Text className="text-xl text-white font-bold">Bootstrap</Text>
+                </View>
+
+
+                <View className="bg-slate-200 opacity-40 py-5 px-5 rounded-md">
+                  <Text className="text-xl text-white font-bold">Javascript</Text>
+                </View>
+
+
+
+                <View className="bg-slate-200 opacity-40 py-5 px-5 rounded-md">
+                  <Text className="text-xl text-white font-bold">MySql</Text>
+                </View>
+
+
+
+                <View className="bg-slate-200 opacity-40 py-5 px-5 rounded-md">
+                  <Text className="text-xl text-white font-bold">GitHub</Text>
+                </View>
+
+
+
+                <View className="bg-slate-200 opacity-40 py-5 px-5 rounded-md">
+                  <Text className="text-xl text-white font-bold">FireBase</Text>
+                </View>
+
+
+
+                <View className="bg-slate-200 opacity-40 py-5 px-5 rounded-md">
+                  <Text className="text-xl text-white font-bold">React Native</Text>
+                </View>
+
+
+              </View>
+            </View>
+
+            <View className="py-8">
+
+              <View className="border-b-4 pb-3 border-orange-500 w-72">
+                <Text className="text-2xl text-white font-bold">
+                  My Projects
+                </Text>
+              </View>
+
+
+              <View className="py-3">
+                <Text className="text-white text-lg">Here, you can explore my personal projects about my current programming and technology skills. Each project represents a unique blend of creativity, problem-solving, and technical expertise.</Text>
+              </View>
+
+
+
+
+            </View>
 
 
           </View>
